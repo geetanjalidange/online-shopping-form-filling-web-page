@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Online Shopping</h1>
+        <h2>Customer Details</h2>
+        <form id="customer-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br><br>
+        </form>
+
+        <h2>Item Purchase Details</h2>
+        <form id="purchase-form">
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item" required><br><br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+            <label for="price">Price per item:</label>
+            <input type="number" id="price" name="price" min="0.01" step="0.01" required><br><br>
+        </form>
+
+        <h2>Return Policy</h2>
+        <p>We offer a 30-day return policy for items that are unused and in their original condition.</p>
+
+        <h2>Payment Options</h2>
+        <input type="radio" id="online" name="payment" value="online" checked>
+        <label for="online">Online Payment</label><br>
+        <input type="radio" id="cod" name="payment" value="cod">
+        <label for="cod">Cash on Delivery</label><br><br>
+
+        <div id="transaction-id" style="display: none;">
+            <label for="transaction">Transaction ID:</label>
+            <input type="text" id="transaction" name="transaction" required><br><br>
+        </div>
+
+        <div id="delivery-charge" style="display: none;">
+            <p>Extra charge of $100 will be added for Cash on Delivery.</p>
+        </div>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
